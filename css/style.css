@@ -161,6 +161,12 @@ html {
   background-attachment: fixed;
 }
 
+@media screen and (max-width : 800px) {
+  #home div .title {
+    padding: 0 3rem;
+  }
+}
+
 .icons i {
   font-size: 22px;
   color: #fff;
@@ -227,10 +233,13 @@ html {
   background-size: 50% !important;
 }
 
-@media screen and (max-width: 766px) {
+@media screen and (max-width: 780px) {
   .img-top {
     height: 280px;
     background-size: 30% !important;
+  }
+  .card-footer {
+    font-size: 12px;
   }
 }
 
