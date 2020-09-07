@@ -1,0 +1,314 @@
+* {
+  box-sizing: border-box;
+  font-family: "Fredoka One", cursive;
+}
+
+body {
+  margin: 0;
+  position: relative;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: rgb(23, 162, 184);
+    color: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb, .footer {
+    background-color: #232526;
+}
+
+.spinner {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-cricle {
+  /* position: absolute;
+    top: 45%;
+    left: 45%; */
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 20px solid #fff;
+  border-right-color: transparent;
+  animation: spinner 1s infinite linear;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(70deg);
+  }
+  40% {
+    transform: rotate(140deg);
+  }
+  60% {
+    transform: rotate(210deg);
+  }
+  80% {
+    transform: rotate(280deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.goTop {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #17A2B8;
+    color: #fff;
+    z-index: 999999;
+    display: none;
+    padding: 7px 18px;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::before,
+.nav-link::after {
+  content: "";
+  width: 0%;
+  height: 5%;
+  position: absolute;
+  background-color: #138496;
+  transition: 0.4s linear;
+}
+
+.nav-link::before {
+  bottom: 0;
+  left: 0;
+}
+
+.nav-link::after {
+  top: 0;
+  right: 0;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+  width: 50%;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: 0 0 10px 3px #eee7;
+}
+
+
+
+.actv {
+  background-color: #232526;
+  animation: bgColor 1s 1 ease-in-out;
+  box-shadow: 0 0 15px 2px rgba(238, 238, 238, 0.35);
+}
+
+@keyframes bgColor {
+  from {
+    background-color: transparent;
+    padding: 15px 0;
+  }
+  to {
+    background-color: #232526;
+    padding: 8px 0;
+  }
+}
+
+.dsabl {
+  background-color: transparent;
+  animation: bgColorReverse 1s 1 ease-in-out;
+}
+
+@keyframes bgColorReverse {
+  from {
+    background-color: #232526;
+  }
+  to {
+    background-color: transparent;
+  }
+}
+
+#home {
+  height: 100vh;
+  background: url(https://cdn.hipwallpaper.com/m/75/68/8BWvUj.jpg) no-repeat
+    center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.icons i {
+  font-size: 22px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.4s linear;
+}
+
+.icons i:hover {
+  color: #138496;
+  transform: scale(1.3);
+}
+
+.title::after {
+  content: "";
+  animation: nameRand 15s infinite ease-in-out;
+}
+
+@keyframes nameRand {
+  0% {
+    content: " Ulug`bek";
+  }
+  50% {
+    content: " Developer";
+  }
+  100% {
+    content: " codeAvazov";
+  }
+}
+
+#about {
+  height: auto;
+}
+
+.ttl {
+  position: relative;
+}
+
+.ttl::before,
+.ttl::after {
+  content: "";
+  width: 50%;
+  height: 5%;
+  position: absolute;
+  background-color: #138496;
+  transition: 0.4s linear;
+}
+
+.ttl::before {
+  bottom: -10px;
+  left: 0;
+}
+
+.ttl::after {
+  top: -10px;
+  right: 0;
+}
+
+#about img {
+  box-shadow: 0 0 40px 3px rgba(0, 0, 0, 0.9);
+}
+
+.img-top {
+  height: 280px;
+  background-size: 50% !important;
+}
+
+@media screen and (max-width: 766px) {
+  .img-top {
+    height: 280px;
+    background-size: 30% !important;
+  }
+}
+
+.html5 {
+  background: url("https://cdn.worldvectorlogo.com/logos/html5.svg") no-repeat
+    center center;
+}
+
+.css3 {
+  background: url("https://cdn.worldvectorlogo.com/logos/css-3.svg") no-repeat
+    center center;
+}
+
+.sass {
+  background: url("https://cdn.worldvectorlogo.com/logos/sass-1.svg") no-repeat
+    center center;
+}
+
+.bootstrap {
+  background: url("https://cdn.worldvectorlogo.com/logos/bootstrap-4.svg")
+    no-repeat center center;
+}
+
+.javaS {
+  background: url("https://cdn.worldvectorlogo.com/logos/javascript.svg")
+    no-repeat center center;
+}
+
+.jquery {
+  background: url("https://cdn.worldvectorlogo.com/logos/jquery.svg") no-repeat
+    center center;
+}
+
+.react {
+  background: url("https://cdn.worldvectorlogo.com/logos/react-2.svg") no-repeat
+    center center;
+}
+
+.redux {
+  background: url("https://cdn.worldvectorlogo.com/logos/redux.svg") no-repeat
+    center center;
+}
+
+.skills .col-md-6 {
+  cursor: pointer;
+  transition: .4s ease-in-out;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+
+.skills .col-md-6:hover {
+  box-shadow: 1px 1px 10px 0 #a0a4a770;
+}
+
+
+.list-link {
+  transition: .4s linear;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.list-link:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#contact {
+  background-color: #fafafa86;
+}
+
+.footer {
+  background: url(https://cdn.hipwallpaper.com/m/75/68/8BWvUj.jpg) no-repeat
+    center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.author {
+  font-size: 28px;
+  vertical-align: -2px;
+}
+
