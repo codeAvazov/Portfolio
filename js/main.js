@@ -11,7 +11,7 @@ $(function() {
 
   let navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
-    if(window.pageYOffset > 100) {
+    if(window.pageYOffset > 50) {
       navbar.classList.remove('dsabl');
       navbar.classList.add('actv');
       $('.goTop').fadeIn();
@@ -27,7 +27,9 @@ $(function() {
   })
 
   $('.navbar-toggler').click(()=>{
-    navbar.classList.toggle('actv');
-    navbar.classList.toggle('dsabl');
+    if(window.pageYOffset < 50) {
+      navbar.classList.toggle('actv');
+      navbar.classList.toggle('dsabl');
+    }
   })
 });
