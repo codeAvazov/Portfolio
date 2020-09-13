@@ -121,6 +121,10 @@ html {
   box-shadow: 0 0 10px 3px #eee7;
 }
 
+.nav-link.actives::before,
+.nav-link.actives::after {
+  width: 50%;
+}
 
 
 .actv {
@@ -317,6 +321,12 @@ html {
   #contact div.text-center h5{
     float: left;
     margin: 0;
+  }
+  .skills .col-md-6 {
+    box-shadow: 1px 1px 10px 0 #a0a4a770;
+  }
+  .skills .col-md-6:hover {
+    box-shadow: 2px 2px 15px 0 #a0a4a7;
   }
 }
 
