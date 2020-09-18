@@ -9,6 +9,7 @@ $(function () {
   $(".spinner").fadeOut("slow");
 
   let navbar = document.getElementById("navbar");
+  let navLink = $(".nav-link");
   window.addEventListener("scroll", () => {
     if (window.pageYOffset > 50) {
       navbar.classList.remove("dsabl");
@@ -19,22 +20,7 @@ $(function () {
       navbar.classList.add("dsabl");
       $(".goTop").fadeOut();
     }
-  });
 
-  $(".goTop").click(function () {
-    scroll(0, 0);
-  });
-
-  $(".navbar-toggler").click(() => {
-    if (window.pageYOffset < 50) {
-      navbar.classList.toggle("actv");
-      navbar.classList.toggle("dsabl");
-    }
-  });
-
-  let navLink = $(".nav-link");
-
-  window.addEventListener("scroll", () => {
     if (window.innerWidth < 780) {
       if (window.pageYOffset > 0 && window.pageYOffset <= 380) {
         clearLink();
@@ -81,6 +67,17 @@ $(function () {
         clearLink();
         navLink[3].classList.add("actives");
       }
+    }
+  });
+
+  $(".goTop").click(function () {
+    scroll(0, 0);
+  });
+
+  $(".navbar-toggler").click(() => {
+    if (window.pageYOffset < 50) {
+      navbar.classList.toggle("actv");
+      navbar.classList.toggle("dsabl");
     }
   });
 

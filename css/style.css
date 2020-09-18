@@ -9,21 +9,23 @@ body {
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 ::selection {
-    background-color: rgb(23, 162, 184);
-    color: #fff;
+  background-color: rgb(23, 162, 184);
+  color: #fff;
 }
+
 
 ::-webkit-scrollbar {
-    width: 10px;
-    background-color: #f1f1f1;
+  width: 10px;
+  background-color: #f1f1f1;
 }
 
-::-webkit-scrollbar-thumb, .footer {
-    background-color: #232526;
+::-webkit-scrollbar-thumb,
+.footer {
+  background-color: #232526;
 }
 
 .spinner {
@@ -38,13 +40,10 @@ html {
 }
 
 .loader-cricle {
-  /* position: absolute;
-    top: 45%;
-    left: 45%; */
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  border: 20px solid #fff;
+  border: 1rem solid #fff;
   border-right-color: transparent;
   animation: spinner 1s infinite linear;
 }
@@ -53,39 +52,26 @@ html {
   0% {
     transform: rotate(0);
   }
-  20% {
-    transform: rotate(70deg);
-  }
-  40% {
-    transform: rotate(140deg);
-  }
-  60% {
-    transform: rotate(210deg);
-  }
-  80% {
-    transform: rotate(280deg);
-  }
   100% {
     transform: rotate(360deg);
   }
 }
 
 .goTop {
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    font-size: 24px;
-    cursor: pointer;
-    background-color: #17A2B8;
-    color: #fff;
-    z-index: 999999;
-    display: none;
-    padding: 7px 18px;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: #17a2b8;
+  color: #fff;
+  z-index: 999999;
+  display: none;
+  padding: 7px 18px;
 }
-
 
 .nav-link {
   position: relative;
@@ -126,7 +112,6 @@ html {
   width: 50%;
 }
 
-
 .actv {
   background-color: #232526;
   animation: bgColor 1s 1 ease-in-out;
@@ -160,13 +145,14 @@ html {
 
 #home {
   height: 100vh;
-  background: url(https://cdn.hipwallpaper.com/m/75/68/8BWvUj.jpg) no-repeat center;
+  background: url(https://cdn.hipwallpaper.com/m/75/68/8BWvUj.jpg) no-repeat
+    center;
   background-size: cover;
   background-attachment: fixed;
   -webkit-background-attachment: fixed;
 }
 
-@media screen and (max-width : 780px) {
+@media screen and (max-width: 780px) {
   #home div .title {
     padding: 0 3rem;
     font-size: 3rem;
@@ -244,7 +230,8 @@ html {
     height: 280px;
     background-size: 30% !important;
   }
-  .card-footer div, .card-body{
+  .card-footer div,
+  .card-body {
     flex-direction: column;
     font-size: 12px;
     text-align: center;
@@ -293,7 +280,7 @@ html {
 
 .skills .col-md-6 {
   cursor: pointer;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
   border-radius: 1rem;
   margin-top: 1rem;
 }
@@ -302,9 +289,8 @@ html {
   box-shadow: 1px 1px 10px 0 #a0a4a770;
 }
 
-
 .list-link {
-  transition: .4s linear;
+  transition: 0.4s linear;
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -317,8 +303,8 @@ html {
   background-color: #f7f7f78c;
 }
 
-@media screen and (max-width : 780px) {
-  #contact div.text-center h5{
+@media screen and (max-width: 780px) {
+  #contact div.text-center h5 {
     float: left;
     margin: 0;
   }
@@ -342,4 +328,5 @@ html {
   font-size: 28px;
   vertical-align: -2px;
 }
+
 
