@@ -17,7 +17,6 @@ html {
   color: #fff;
 }
 
-
 ::-webkit-scrollbar {
   width: 10px;
   background-color: #f1f1f1;
@@ -110,6 +109,42 @@ html {
 .nav-link.actives::before,
 .nav-link.actives::after {
   width: 50%;
+}
+
+.nav-item .mode {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.4s linear;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.svg {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Sun.svg/35px-Sun.svg.png")
+    no-repeat center;
+  background-size: cover;
+  background-color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  transition: .6s ease;
+}
+
+#darkMode:checked + .svg {
+  background-image: url("https://www.craftgenesis.com/pub/media/catalog/product/cache/81ec28dd8a03b8dc5d8f74782ea8cce8/C/G/CGC6406_1.jpg");
+}
+
+#darkMode:checked ~ * {
+  filter: invert(1);
 }
 
 .actv {
@@ -299,9 +334,7 @@ html {
   text-decoration: none;
 }
 
-#contact {
-  background-color: #f7f7f78c;
-}
+
 
 @media screen and (max-width: 780px) {
   #contact div.text-center h5 {
@@ -329,4 +362,6 @@ html {
   vertical-align: -2px;
 }
 
-
+.text-info:hover {
+  text-decoration: none;
+} 

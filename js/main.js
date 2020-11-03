@@ -86,4 +86,39 @@ $(function () {
       navLink[i].classList.remove("actives");
     }
   }
+
+  let mode = $("#darkMode");
+  let ttl = $(".ttl");
+  let txt = $(".texts");
+  let resume = $(".resume");
+  let contacts = $(".contacts");
+
+  $("#darkMode").change(() => {
+    if (mode[0].checked) {
+      console.log(contacts[0])
+      document.body.classList.add("bg-dark");
+      for (let i = 0; i < ttl.length; i++) {
+        ttl[i].classList.add("text-white");
+      }
+      for (let i = 0; i < txt.length; i++) {
+        txt[i].classList.add("text-white");
+      }
+      resume[0].classList.add('bg-dark')
+      resume[0].classList.add('text-light')
+      contacts[0].classList.add('bg-dark')
+      contacts[0].classList.add('text-light')
+    } else {
+      document.body.classList.remove("bg-dark");
+      for (let i = 0; i < ttl.length; i++) {
+        ttl[i].classList.remove("text-white");
+      }
+      for (let i = 0; i < txt.length; i++) {
+        txt[i].classList.remove("text-white");
+      }
+      resume[0].classList.remove('bg-dark')
+      resume[0].classList.remove('text-light')
+      contacts[0].classList.remove('bg-dark')
+      contacts[0].classList.remove('text-light')
+    }
+  });
 });
